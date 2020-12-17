@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Cesars Code</title>
+</head>
+
+<body>
+    <div class='container'>
+        <div class='code-container'>
+            <div class='header'>
+                <h3 class='title'>Szyfr Cezara</h3>
+            </div>
+            <div class='modal-wrapper'>
+                <div class='modal-row'>
+                    <label class='modal-title'>Wpisz Kod Do Zaszyfrowania</label>
+                    <input class='modal-input' id='modal-code' type='text' maxlength="15" placeholder="max 15 znaków"
+                        required autofocus />
+                    <label class='modal-choise'>O ile liter przesunąć?</label>
+                    <input class='modal-input modalNr' id='code-choise' type='number' min='1' max='13' step='1'
+                        placeholder="1-13" required />
+                </div>
+                <button class='button' id='start-button' type='button' disabled>
+                    Start
+                </button>
+                <div class='output'>
+                    <h3 class='output_title'>Twój nowy Kod</h3>
+                    <div class='output_code' id='output-code'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script defer src="js/script.js"></script>
+</body>
+
+</html>
