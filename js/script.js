@@ -32,20 +32,16 @@ function cesars() {
 
     function checkInput() {
         let string = [];
-        const nrInput = inputNumber.value
-        // console.log(nr);
-        // const regex = /!+\w+/g
         codeInput.forEach(el => {
             if (parseInt(el) < 10) {
                 string.push(el)
-            } else if (el === '!' || el === '?' || el === '@' || el === '#') {
+            } else if (el === '!' || el === '?' || el === '@' || el === '#' || el === '*' || el === '$') {
                 string.push(el)
                 console.log(el);
             } else if (el === el.toUpperCase()) {
                 const element = el.toLowerCase();
-                string.push(codeAlpha[(codeAlpha.indexOf(element) + inputNumber.value) % alphaLenght].toUpperCase());
-            } else string.push(codeAlpha[(codeAlpha.indexOf(el) + inputNumber.value) % alphaLenght]);
-            // console.log(nr);
+                string.push(codeAlpha[(codeAlpha.indexOf(element) + 13) % alphaLenght].toUpperCase());
+            } else string.push(codeAlpha[(codeAlpha.indexOf(el) + 13) % alphaLenght]);
         });
         return string.join('')
     }
