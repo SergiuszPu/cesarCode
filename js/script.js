@@ -43,7 +43,7 @@ function cesars() {
                 console.log(el);
             } else if (el === el.toUpperCase()) {
                 const element = el.toLowerCase();
-                string.push(codeAlpha[(codeAlpha.indexOf(element) + nrInput) % alphaLenght].toUpperCase());
+                string.push(codeAlpha[(codeAlpha.indexOf(element) + inputNumber.value) % alphaLenght].toUpperCase());
             } else string.push(codeAlpha[(codeAlpha.indexOf(el) + inputNumber.value) % alphaLenght]);
             // console.log(nr);
         });
